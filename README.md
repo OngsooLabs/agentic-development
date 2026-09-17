@@ -1,6 +1,6 @@
 # Agentic Development
 
-Practical learning notes on **context design, agent orchestration, quality evaluation, and benchmarking** in AI-assisted software development.
+Practical learning notes on **context design, agent orchestration, permission boundaries, execution observability, quality evaluation, and benchmarking** in AI-assisted software development.
 
 The central question is not simply which model to use. It is how to help an agent find the right context, work within a clear scope, and connect its conclusions to evidence.
 
@@ -12,10 +12,12 @@ These articles turn development observations and design discussions into general
 | --- | --- |
 | How can one developer preserve decisions across sessions and agents? | [Context Architecture for Solo Agent-Driven Development](articles/context-architecture-for-solo-agent-development.md) |
 | When is delegation worth its coordination and verification cost? | [Cost-Aware Agent Orchestration](articles/cost-aware-agent-orchestration.md) |
+| What is an agent allowed to do, beyond what its tools can do? | [Capability Is Not Authority: Defining Permission Boundaries for Coding Agents](articles/agent-authority-boundaries.md) |
+| How do requested settings differ from observed model execution? | [Model Routing Is Not Model Observability](articles/model-routing-and-observability.md) |
 | How should quality, latency, and failed requests be measured separately? | [Benchmarking Quality, Performance, and Reliability](articles/benchmarking-quality-performance-and-reliability.md) |
 | How can semantic evaluation complement rules without becoming unquestioned truth? | [Designing AI Judges for Quality Validation](articles/designing-ai-judges-for-quality-validation.md) |
 
-Start with context architecture for project continuity, orchestration for task execution, or either evaluation article for measurement design. There is no required reading sequence.
+Start with context architecture for project continuity, orchestration for task execution, permission boundaries for authorized scope, model observability for execution evidence, or either evaluation article for measurement design. There is no required reading sequence.
 
 ## How to read these notes
 
