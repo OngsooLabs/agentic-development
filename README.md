@@ -16,6 +16,7 @@ These articles turn development observations and design discussions into general
 | How do requested settings differ from observed model execution? | [Model Routing Is Not Model Observability](articles/model-routing-and-observability.md) |
 | How should quality, latency, and failed requests be measured separately? | [Benchmarking Quality, Performance, and Reliability](articles/benchmarking-quality-performance-and-reliability.md) |
 | How can semantic evaluation complement rules without becoming unquestioned truth? | [Designing AI Judges for Quality Validation](articles/designing-ai-judges-for-quality-validation.md) |
+| How can security validation stay bounded while checking responses and side effects? | [Risk-Based Security Validation Without Building an Attack Platform](articles/risk-based-security-validation.md) |
 
 Start with context architecture for project continuity, orchestration for task execution, permission boundaries for authorized scope, model observability for execution evidence, or either evaluation article for measurement design. There is no required reading sequence.
 
