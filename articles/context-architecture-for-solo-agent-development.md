@@ -85,6 +85,21 @@ These are design axes, not maturity levels. One developer with many independent 
 
 The useful combination is a simple route into a domain and enough task state to continue its current work. A scenario can explain how to use a contract, but should link to that contract rather than redefine it.
 
+## Adapt the entry path without cloning every rule
+
+A portable context design keeps stable constraints separate from the entry path used for a particular task. A solo developer returning after a break might begin with current state and the active decision, then open the relevant domain contract. A team member changing one component might begin with its domain owner and shared contract, then inspect dependent work and the current integration state.
+
+| Need | Solo-oriented entry path | Team-oriented entry path |
+| --- | --- | --- |
+| Recover the permitted next action | Current state and active task | Assigned scope and cross-team dependencies |
+| Find a stable definition | Link from the task to its owning contract | Domain map and shared contract owner |
+| Understand why a choice changed | Decision note and unfinished work | Decision note and affected consumers |
+| Avoid conflicting changes | Bound each agent's editable area | Coordinate ownership and integration boundaries |
+
+These are illustrative routes, not exclusive layouts. Keep shared definitions in one authoritative location, even when several entry documents link to them. A team's agreed constraints remain in force; importing a personal workflow should not silently override its permissions, budgets, or conventions.
+
+A lightweight adaptation exercise is to give a fresh session the same bounded task through each proposed entry path. Check whether it finds the relevant contract, identifies what is not verified, and avoids editing outside scope. Use observed reconstruction failures to change the route, rather than equating more documents with a better architecture. No comparative productivity result is implied.
+
 ## Keep context current without erasing the reasons
 
 Move durable implementation facts into their owning documents. Keep unfinished work in the active task record. Preserve important reasons and evidence where they can be traced, without making all history mandatory reading.

@@ -76,6 +76,25 @@ A second model's agreement is also not ground truth. Two agents may share the sa
 
 The presence of a subagent does not imply continuous supervision. Progress checks and completion checks must be deliberately performed; do not report them merely because delegation occurred.
 
+## Close the loop with requirements, not agreement
+
+For delegated implementation, define what the accepting agent must independently inspect before assigning the work. A concise handoff can connect each acceptance condition to the changed artifact, an executed check, its target revision and environment, and any unresolved limitation. This is a proposed evidence format, not a requirement for another management layer.
+
+```text
+Original request and acceptance conditions
+    -> Bounded implementation
+    -> Actual changes and execution evidence
+    -> Independent comparison with the original conditions
+    -> Scoped correction and recheck when needed
+    -> Completion within the authorized boundary
+```
+
+As a fictional example, a worker may report that notification delivery passes while its evidence covers only the first successful delivery. If the original task also requires duplicate-delivery handling, the accepting agent should preserve that gap, request or perform the missing authorized check, and examine the resulting state. A second confident summary does not close the gap.
+
+Choose the depth of checking from the consequences and uncertainty of the change. A small text edit does not justify repeating an entire integration suite; a persistence or accounting change should not be accepted solely from a screen that looks correct. Reuse evidence only while its scope and target remain applicable.
+
+Separating execution from acceptance means assigning responsibility and checking against independent evidence. It does not require different model brands, continuous polling of workers, or reimplementing the same feature twice. It also does not introduce a mandatory editorial review process for these learning articles.
+
 ## Account for the whole workflow
 
 Lower main-agent usage alone does not establish lower total cost. Compare the complete task:

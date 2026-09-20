@@ -110,6 +110,46 @@ The former needs acquisition, completeness, cleaning, and response-time measurem
 
 When analysis uses an AI judge, distinguish that external evaluation tool from any quality checks already inside the tested service. A common evaluation procedure should be applied consistently across outputs rather than treating one provider's internal self-assessment as the shared reference.
 
+## Make the measurement handoff explicit
+
+A measurement stage should return a reproducible evidence package rather than a preferred product conclusion. An illustrative handoff contains the protocol and dataset identifiers, scheduled and executed case counts, per-attempt outcomes, each metric's population, predefined classifications, and unresolved validity limitations.
+
+| During measurement | During the later product decision |
+| --- | --- |
+| Classify a case using the fixed rubric | Decide which use cases the product should prioritize |
+| Identify missing or invalid observations | Compare suitability and improvement priorities |
+| Explain a protocol deviation and its affected population | Decide which claims the evidence supports |
+| Preserve failures, retries, and exclusions | Decide whether more evidence is needed before investing |
+
+A completed run with unresolved validity problems is not automatically decision-ready. Preserve the limitation instead of moving it into a footnote that disappears from the handoff.
+
+When a tool defect is discovered, keep the original run and describe the affected observations. A corrected run receives a new identity and records its relationship to the original. Whether to rerun the whole dataset or a predefined subset depends on the defect and protocol; do not silently substitute only favorable cases.
+
+## Keep the Reader benchmark tool separate from the service
+
+For a tool that extracts readable content from pages, an independent benchmark application can keep collection and inspection separate from the production interface and product-specific success presentation. Independence does not by itself establish fairness: the input, options, timing, limits, cache conditions, and evaluation rules still need to be documented.
+
+The proposed minimal scope is a Reader-only collector and inspector. It calls the configured services, lets a user inspect requests and responses, and exports evidence for later analysis. Recurring change-detection tests and built-in AI conclusions are separate concerns, not prerequisites for this tool.
+
+```text
+Frozen dataset and run settings
+    -> Provider adapters
+    -> Per-attempt records and response artifacts
+    -> Inspectable results
+    -> Exported run package
+    -> Separate analysis and product decisions
+```
+
+Adapters should normalize fields for comparison without replacing the provider's original outcome. Distinguish transport errors, provider-reported failures, extraction problems, and benchmark-tool exceptions. Where services expose different options, record that difference instead of assuming identical option names produce equivalent behavior.
+
+An illustrative export separates a run manifest, case summary, attempt records, and response artifacts. The manifest identifies the tool revision, protocol, inputs, and known conditions. Case and attempt identifiers connect summaries to their evidence; a later analyst should not have to infer which response produced a row.
+
+The interface should make the URL, request options, attempt number, elapsed time, transport status, provider outcome, response body, and extracted text easy to inspect. Credential fields may use masking with an explicit reveal control, but masking is not secret storage protection. Exclude API keys and authorization headers from exports and diagnostics.
+
+Preserve failure metadata under the recorded retention policy. That does not require retaining sensitive or third-party bodies indefinitely: define body retention, redaction, access, and deletion separately, and identify unavailable artifacts honestly. Before giving a package to an external analysis tool, remove credentials and material not authorized for that destination.
+
+This is a proposed collection architecture, not a claim that an independent tool has already achieved reproducibility or that any provider performs better.
+
 ## Keep results tied to the question
 
 Before interpreting a result, ask whether inputs and conditions are comparable, failures and retries remain visible, each metric's population is clear, and the evaluation criteria answer the intended use case.
