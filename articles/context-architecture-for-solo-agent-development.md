@@ -32,6 +32,25 @@ These sources answer different questions; their relationship is not simply “th
 
 An entry document can link to the relevant sources without copying all of their contents. This keeps discovery simple while letting knowledge remain separated by responsibility.
 
+## Treat reference documents as inputs, not automatic authority
+
+A design report, screenshot, or external agent proposal can explain the desired outcome without accurately describing the current application. Before turning it into an implementation plan, inspect the relevant repository entry points, routes, shared components, configuration, owned contracts, and existing checks.
+
+In a fictional homepage redesign, a reference might assume a component framework that the application does not use. Reproducing that assumption could turn a presentation change into an unrequested migration. Instead, recover the intended user journey and map it onto the actual rendering structure, design tokens, authentication destinations, feature availability, and metadata behavior.
+
+| Input | What it can establish | What still needs checking |
+| --- | --- | --- |
+| Reference document or image | Desired message, layout, or user outcome | Whether its implementation assumptions apply |
+| Current code and configuration | The implementation at the inspected revision | Whether it matches the contract or is deployed |
+| Owned contract and approved change | Intended behavior and authorized scope | Whether implementation and checks satisfy it |
+| Runtime evidence | Observed behavior in an identified environment | Behavior outside that environment and scope |
+
+The repository is a starting point for current implementation evidence, not a rule that existing code is always correct. An approved change may intentionally replace current behavior. When code, a contract, and a proposal disagree, identify the discrepancy and the owning decision rather than automatically choosing the code or the newest prose.
+
+A compact integration plan can say which reference ideas are adopted, which are adapted or excluded, which existing contracts must remain intact, and which checks will demonstrate the result. Keep it in the active task record instead of creating a competing authority document. A reference does not authorize framework migration, permission changes, or deployment by implication.
+
+This is a proposed planning pattern, not a claim that a particular redesign passed authentication, accessibility, or search-engine validation.
+
 ## Preserve the next decision, not the whole conversation
 
 A compact handoff can sit inside the existing task document. It does not require another document category.

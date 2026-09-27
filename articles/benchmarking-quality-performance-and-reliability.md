@@ -125,6 +125,27 @@ A completed run with unresolved validity problems is not automatically decision-
 
 When a tool defect is discovered, keep the original run and describe the affected observations. A corrected run receives a new identity and records its relationship to the original. Whether to rerun the whole dataset or a predefined subset depends on the defect and protocol; do not silently substitute only favorable cases.
 
+## When a benchmark failure belongs to the benchmark
+
+Consider a fictional recurring monitor with separate content checks and notification deliveries. A test observes the intended checks, then waits for a failed notification to retry. During that wait, the scheduler legitimately starts another content check. The final usage total is larger than the test expected.
+
+That observation does not, by itself, establish duplicate accounting. The test may have counted an additional authorized execution inside an unintentionally extended observation window. Duplicate accounting remains another hypothesis until execution identities, usage records, and delivery attempts are reconciled.
+
+```text
+Intended content checks finish
+    -> Notification delivery is still retrying
+    -> Another scheduled content check starts
+    -> A final aggregate includes more work than the assertion expected
+```
+
+Define the content-observation boundary separately from the delivery-retry boundary. State before execution which scheduled runs belong to each assertion and how in-flight work at the boundary is handled. Preserve all observed executions, including those outside the intended window, so they can explain the aggregate rather than disappear from it.
+
+A controlled fixture might stop new scheduling while allowing an existing delivery to finish. That is only valid if the pause semantics preserve the behavior under test; pausing must not silently cancel retries, discard accounting, or turn a natural-scheduling test into a manual trigger. Verify those semantics rather than treating a pause call as proof of isolation.
+
+Once evidence identifies a window defect, correct the protocol instead of changing correct product accounting to satisfy the old assertion. Preserve the original failure, record the affected scope, and use a new protocol version and run identity. A targeted rerun is justified only when the defect is confined to that scope; a shared collector defect may require broader remeasurement.
+
+A pass under the corrected protocol establishes neither a product performance improvement nor a pass for unrelated cases. The original observation, revised explanation, and new result answer different questions. See [Bounded Product Changes](from-benchmark-findings-to-product-changes.md) for the next decision boundary.
+
 ## Keep the Reader benchmark tool separate from the service
 
 For a tool that extracts readable content from pages, an independent benchmark application can keep collection and inspection separate from the production interface and product-specific success presentation. Independence does not by itself establish fairness: the input, options, timing, limits, cache conditions, and evaluation rules still need to be documented.

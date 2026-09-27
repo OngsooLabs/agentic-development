@@ -15,10 +15,11 @@ These articles turn development observations and design discussions into general
 | What is an agent allowed to do, beyond what its tools can do? | [Capability Is Not Authority: Defining Permission Boundaries for Coding Agents](articles/agent-authority-boundaries.md) |
 | How do requested settings differ from observed model execution? | [Model Routing Is Not Model Observability](articles/model-routing-and-observability.md) |
 | How should quality, latency, and failed requests be measured separately? | [Benchmarking Quality, Performance, and Reliability](articles/benchmarking-quality-performance-and-reliability.md) |
+| How should findings become bounded changes and evidence-bounded product claims? | [From Benchmark Findings to Bounded Product Changes](articles/from-benchmark-findings-to-product-changes.md) |
 | How can semantic evaluation complement rules without becoming unquestioned truth? | [Designing AI Judges for Quality Validation](articles/designing-ai-judges-for-quality-validation.md) |
 | How can security validation stay bounded while checking responses and side effects? | [Risk-Based Security Validation Without Building an Attack Platform](articles/risk-based-security-validation.md) |
 
-Start with context architecture for project continuity, orchestration for task execution, permission boundaries for authorized scope, model observability for execution evidence, or either evaluation article for measurement design. There is no required reading sequence.
+Start with context architecture for project continuity, orchestration for task execution, permission boundaries for authorized scope, model observability for execution evidence, the evaluation articles for measurement design, or bounded product changes for the decisions that follow measurement. There is no required reading sequence.
 
 ## How to read these notes
 
