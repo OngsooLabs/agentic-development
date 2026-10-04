@@ -16,6 +16,7 @@ These articles turn development observations and design discussions into general
 | How do requested settings differ from observed model execution? | [Model Routing Is Not Model Observability](articles/model-routing-and-observability.md) |
 | How should quality, latency, and failed requests be measured separately? | [Benchmarking Quality, Performance, and Reliability](articles/benchmarking-quality-performance-and-reliability.md) |
 | How should findings become bounded changes and evidence-bounded product claims? | [From Benchmark Findings to Bounded Product Changes](articles/from-benchmark-findings-to-product-changes.md) |
+| What should generated content and automated playtests actually prove? | [Evidence-Carrying Content and the Limits of Automated Playtesting](articles/evidence-carrying-content-and-playtesting.md) |
 | How can semantic evaluation complement rules without becoming unquestioned truth? | [Designing AI Judges for Quality Validation](articles/designing-ai-judges-for-quality-validation.md) |
 | How can security validation stay bounded while checking responses and side effects? | [Risk-Based Security Validation Without Building an Attack Platform](articles/risk-based-security-validation.md) |
 

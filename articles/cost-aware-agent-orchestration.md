@@ -95,6 +95,30 @@ Choose the depth of checking from the consequences and uncertainty of the change
 
 Separating execution from acceptance means assigning responsibility and checking against independent evidence. It does not require different model brands, continuous polling of workers, or reimplementing the same feature twice. It also does not introduce a mandatory editorial review process for these learning articles.
 
+## Design tasks that can terminate
+
+Acceptance criteria describe success. A termination contract also describes when work should stop without success, what limits apply to repeated attempts, and which unresolved facts must survive the stop.
+
+This is a proposed extension to the existing task brief, not a requirement for another planning document. Define a finite retry budget, whether that budget counts the initial attempt, which failures are retryable, and a bound on waiting or polling where a dependency can remain unavailable. Apply the limits across delegated work rather than silently resetting them by renaming a task or starting another worker.
+
+Repeatedly reading the same unchanged scope without a new hypothesis or additional evidence is a reason to stop that investigation. It is not a reason to abandon unrelated unfinished work. Repeating an unchanged deterministic check should likewise require an explanation of what new information it could supply. A deliberate repeatability experiment is different: its repetitions and interpretation belong to the experiment's protocol.
+
+| Condition | Bounded response | What not to claim |
+| --- | --- | --- |
+| The authorized result and required checks are satisfied | Close the task and report the applicable evidence | Universal correctness outside the checked scope |
+| A repeated investigation yields no new evidence | End that investigation and continue independent work | That every remaining question is resolved |
+| An optional discovery worker is unavailable | Record the unavailable result and use direct evidence where sufficient | A product defect caused by the missing worker |
+| A required check cannot run | Preserve the blocker and complete other authorized work | That the missing check passed |
+| The retry or wait budget is exhausted | Stop the affected path and report attempts and the unresolved condition | Success merely because execution ended |
+
+Keep optional discovery off the critical path when the accepting agent can obtain sufficient evidence directly. Do not turn an assigned helper into a new prerequisite merely because it was invoked. Conversely, calling a check optional does not remove an original requirement that depends on its evidence.
+
+The caller or execution harness must actually enforce cancellation and budgets; a prompt that requests them is not execution evidence. Cancellation must respect the operation's semantics, especially where effects may already have occurred. A retry ceiling limits an authorized action; it does not authorize repeating a deployment, purchase, or data mutation.
+
+Report meaningful progress as completed scope, new findings, remaining work, and blockers. Avoid inventing percentages or expanding into unrelated cleanup just to keep working. A stopped task with an explicit gap is more accurate than a completion statement that hides it.
+
+These limits make the workflow's stopping behavior explicit. Their presence alone does not establish measured time or token savings.
+
 ## Account for the whole workflow
 
 Lower main-agent usage alone does not establish lower total cost. Compare the complete task:
