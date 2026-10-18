@@ -148,6 +148,14 @@ Parallelism needs an integration plan when tasks touch shared files, schemas, or
 
 Model and reasoning settings should follow the work and available environment. A low-cost worker that misses the relevant path can make the entire workflow more expensive. Conversely, the strongest available configuration is not automatically justified for every mechanical step. Requested settings and observed settings should remain distinct.
 
+## Budget the whole workflow, not just the next call
+
+When AI tools have different usage limits, allocate them by task value and independence rather than giving every tool an equal share. Distinguish broad read-only discovery, bounded implementation, mechanical checks, and final acceptance. Identify which work can continue without waiting for a worker.
+
+A task budget can set a default call limit, define what evidence justifies an extra call, and stop retries that return no usable information. This is an operational constraint, not proof that a provider or model is universally cheaper. If a worker returns nothing useful, record the result as unavailable and continue independent work rather than creating an indefinite dependency.
+
+Compare total effort: preparing the handoff, waiting, reviewing, integrating, rerunning checks, and repairing mistakes. Fewer calls are not automatically better, and more agents do not automatically create parallel progress. Optimize for an acceptable result within an explicit resource budget.
+
 ## Avoid process inflation
 
 An orchestration layer should help execute the permitted work, not repeatedly reopen decisions already settled for that scope. Revisit a decision when new evidence exposes a material problem, not merely because another agent joined.

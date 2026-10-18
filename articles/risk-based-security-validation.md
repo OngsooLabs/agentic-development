@@ -140,3 +140,12 @@ Official sources checked on 2026-09-18. The OWASP links below refer specifically
 5. [Grafana k6 — Thresholds](https://grafana.com/docs/k6/latest/using-k6/thresholds/)
 
 Related reading: [Agent permission boundaries](agent-authority-boundaries.md) and [Benchmarking quality, performance, and reliability](benchmarking-quality-performance-and-reliability.md).
+
+
+## Isolate test evidence and backups as well as the target
+
+Test isolation is incomplete if a new run can overwrite artifacts from an earlier run. Backups, logs, screenshots, result files, and restore inputs may be the only evidence of a prior state; treat them as data with an owner and lifecycle, not disposable temporary output.
+
+Prefer run-specific output directories or unique identifiers. Before writing to a known path, establish whether it already contains evidence that must be preserved. Keep the original source, generated backup, and test result distinguishable. A successful comparison of the live target does not prove that an overwritten backup was preserved or recoverable.
+
+If an overwrite occurs, report separately whether the original target remains intact, whether a prior artifact was lost, and whether a recovery source exists. Do not describe an artifact as restored unless its contents were actually recovered and verified. These controls reduce evidence loss; they do not by themselves prove the tested product is correct.
