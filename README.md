@@ -15,6 +15,7 @@ These articles turn development observations and design discussions into general
 | How can an AI-assisted experiment reach a defensible stop decision? | [When an Experiment Fails](articles/when-an-experiment-fails.md) |
 | Why do release builds need independent acceptance tests? | [Release Builds and Acceptance Tests](articles/release-build-acceptance-tests.md) |
 | How can scheduled content remain consistent across configuration changes? | [Version-Pinned Scheduled Content Generation](articles/version-pinned-scheduled-content-generation.md) |
+| How can a SaaS team reduce operating cost while testing real customer demand? | [Low-Cost Operations and Demand Validation](articles/low-cost-operations-and-demand-validation.md) |
 | What is an agent allowed to do, beyond what its tools can do? | [Capability Is Not Authority: Defining Permission Boundaries for Coding Agents](articles/agent-authority-boundaries.md) |
 | How do requested settings differ from observed model execution? | [Model Routing Is Not Model Observability](articles/model-routing-and-observability.md) |
 | How should quality, latency, and failed requests be measured separately? | [Benchmarking Quality, Performance, and Reliability](articles/benchmarking-quality-performance-and-reliability.md) |
