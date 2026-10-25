@@ -13,6 +13,8 @@ These articles turn development observations and design discussions into general
 | How can one developer preserve decisions across sessions and agents? | [Context Architecture for Solo Agent-Driven Development](articles/context-architecture-for-solo-agent-development.md) |
 | When is delegation worth its coordination and verification cost? | [Cost-Aware Agent Orchestration](articles/cost-aware-agent-orchestration.md) |
 | How can an AI-assisted experiment reach a defensible stop decision? | [When an Experiment Fails](articles/when-an-experiment-fails.md) |
+| Why do release builds need independent acceptance tests? | [Release Builds and Acceptance Tests](articles/release-build-acceptance-tests.md) |
+| How can scheduled content remain consistent across configuration changes? | [Version-Pinned Scheduled Content Generation](articles/version-pinned-scheduled-content-generation.md) |
 | What is an agent allowed to do, beyond what its tools can do? | [Capability Is Not Authority: Defining Permission Boundaries for Coding Agents](articles/agent-authority-boundaries.md) |
 | How do requested settings differ from observed model execution? | [Model Routing Is Not Model Observability](articles/model-routing-and-observability.md) |
 | How should quality, latency, and failed requests be measured separately? | [Benchmarking Quality, Performance, and Reliability](articles/benchmarking-quality-performance-and-reliability.md) |
