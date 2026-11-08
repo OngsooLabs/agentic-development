@@ -10,6 +10,9 @@ These articles turn development observations and design discussions into general
 
 | Question | Article |
 | --- | --- |
+| How should mobile driving controls, camera response, and telemetry be validated together? | [Designing Mobile Driving Controls as a Feedback System](articles/mobile-driving-controls-and-feedback.md) |
+| What must be checked when AI-generated UI artwork becomes a Unity interface? | [From AI-Generated UI Assets to Usable Unity Screens](articles/ai-generated-ui-assets-in-unity.md) |
+| How can core game abilities be unlocked without random rewards? | [Designing Game Progression Without Random Unlocks](articles/progression-without-random-unlocks.md) |
 | How can one developer preserve decisions across sessions and agents? | [Context Architecture for Solo Agent-Driven Development](articles/context-architecture-for-solo-agent-development.md) |
 | When is delegation worth its coordination and verification cost? | [Cost-Aware Agent Orchestration](articles/cost-aware-agent-orchestration.md) |
 | How can an AI-assisted experiment reach a defensible stop decision? | [When an Experiment Fails](articles/when-an-experiment-fails.md) |
