@@ -14,6 +14,13 @@ Check the screen at several aspect ratios, including wide and near-square layout
 
 Record three different outcomes: artwork accepted, Unity layout implemented, and on-device usability verified. They should not collapse into a single “UI complete” status.
 
+
+## Visual approval is not release acceptance
+
+A representative Unity screen may look consistent across several Play Mode resolutions and still fail on a physical device. Separate four claims: the visual design is acceptable, the controls function in the Editor, touch usability works on target devices, and the release build works with its external services.
+
+A passing automated test suite supports only the cases it exercised. It does not by itself verify authentication, purchases, advertising, multiplayer sessions, or store-submitted builds. Track these checks independently, and avoid reporting the entire interface as release-ready based on screenshots or Editor tests alone.
+
 ## Limits
 
 This is a workflow pattern, not evidence that a particular AI tool saves time or produces better UI than manual design. A rendered mockup alone cannot validate touch usability.
