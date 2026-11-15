@@ -10,6 +10,8 @@ These articles turn development observations and design discussions into general
 
 | Question | Article |
 | --- | --- |
+| How can a feature-complete game still fail its gameplay test? | [When a Feature-Complete Game Still Isn't Fun](articles/feature-complete-but-not-fun.md) |
+| Why is audio-file analysis not enough to choose game sounds? | [Why Sound Selection Needs Listening, Not Just File Analysis](articles/sound-selection-requires-listening.md) |
 | How should mobile driving controls, camera response, and telemetry be validated together? | [Designing Mobile Driving Controls as a Feedback System](articles/mobile-driving-controls-and-feedback.md) |
 | What must be checked when AI-generated UI artwork becomes a Unity interface? | [From AI-Generated UI Assets to Usable Unity Screens](articles/ai-generated-ui-assets-in-unity.md) |
 | How can core game abilities be unlocked without random rewards? | [Designing Game Progression Without Random Unlocks](articles/progression-without-random-unlocks.md) |
