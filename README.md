@@ -10,6 +10,8 @@ These articles turn development observations and design discussions into general
 
 | Question | Article |
 | --- | --- |
+| Why should auto-battle strategy and combat spectacle be evaluated separately? | [Strategy Can Be Fun While Auto-Battle Is Boring](articles/strategy-and-spectator-fun.md) |
+| How can generated 2D character poses stay consistent in a game? | [Consistent AI-Generated 2D Characters Need an Art Contract](articles/consistent-ai-generated-2d-character-art.md) |
 | How can a feature-complete game still fail its gameplay test? | [When a Feature-Complete Game Still Isn't Fun](articles/feature-complete-but-not-fun.md) |
 | Why is audio-file analysis not enough to choose game sounds? | [Why Sound Selection Needs Listening, Not Just File Analysis](articles/sound-selection-requires-listening.md) |
 | How should mobile driving controls, camera response, and telemetry be validated together? | [Designing Mobile Driving Controls as a Feedback System](articles/mobile-driving-controls-and-feedback.md) |
