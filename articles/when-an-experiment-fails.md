@@ -25,6 +25,13 @@ Separate four conclusions:
 
 A strategy can execute correctly without outperforming a simple baseline. A small sample can fail to establish an advantage without proving that no advantage is possible.
 
+
+## When control tuning cannot rescue the core loop
+
+A game prototype offers a concrete version of this problem. Simplifying controls or slowing the simulation may make input easier to understand, but neither change necessarily fixes an unappealing core loop. Treat each adjustment as a test of a specific hypothesis, not as automatic progress toward fun.
+
+If repeated bounded changes do not improve the primary play experience, preserve the negative observations and reconsider the interaction model itself. Stopping the prototype is a legitimate possible decision, but a developer's frustration alone is not evidence of a representative player outcome. Distinguish a proposed stop from a finalized project closure.
+
 ## Preserve negative and inconclusive results
 
 Keep comparison conditions, failed runs, exclusions, and reasons for stopping. Do not remove inconvenient samples or change the scoring rule after seeing the result unless the new analysis is labelled exploratory and a fresh confirmation set is used.
